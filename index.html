@@ -1,59 +1,121 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>About me</title>
-<style>
-body{background:url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDBvNWNsbnRwNDkxYmY0NjlyaDkwcHl2Y3NrenRoZTdrMW9qdWd6YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TxVVB6PfWMjE4/giphy.gif')center/cover no-repeat fixed,#000;color:#f3f3f4;font-family:Georgia,serif;margin:0;min-height:100vh;cursor:url('cursor.png'),auto
-.container{max-width:800px;margin:30px auto;position:relative;z-index:3}
-header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-img{width:220px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-h1{font-size:48px;margin:0;text-shadow:0 2px 6px rgba(0,0,0,0.7)}
-h2{text-align:center}
-a{color:#cfe8ff}
-a:hover{color:#fff;text-decoration:underline}
-.site-item{position:fixed;display:flex;align-items:center;gap:10px;width:220px;padding:8px 10px;background:rgba(0,0,0,0.35);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.6);z-index:2}
-.site-item img{width:64px;height:64px;margin:0}
-.site-item[data-name="YouTube"]{left:18%;top:12%;transform:rotate(-6deg)}
-.site-item[data-name="Roblox"]{right:18%;top:12%;transform:rotate(6deg)}
-.site-item[data-name="Google"]{left:18%;bottom:12%;transform:rotate(-4deg)}
-.site-item[data-name="ChatGPT"]{left:50%;bottom:12%;transform:translateX(-50%)}
-.site-item[data-name="Copilot"]{right:18%;bottom:12%;transform:rotate(4deg)}
-</style>
-<audio autoplay loop>
-<source src="bg-music.mp3" type="audio/mpeg">
-</audio>
-</head>
-<body>
-<div class="container">
-<header>
-<img src="profile.jpg" alt="My photo" 
-<h1>Lord Christian Dave D. Cortez</h1>
-<p>My most visited website recently is <strong><a href="https://www.youtube.com" target="_blank">YouTube</a></strong>.</p>
-</header>
-<h2>Here are 5 websites I visit most often</h2>
-<div class="site-item" data-name="YouTube">
-<img src="crystal_heart.gif" alt="YouTube">
-<a href="https://www.youtube.com" target="_blank">#1 YouTube</a>
-</div>
-<div class="site-item" data-name="Roblox">
-<img src="crystal_heart.gif" alt="Roblox">
-<a href="https://www.roblox.com" target="_blank">#2 Roblox</a>
-</div>
-<div class="site-item" data-name="Google">
-<img src="crystal_heart.gif" alt="Google">
-<a href="https://www.google.com" target="_blank">#3 Google</a>
-</div>
-<div class="site-item" data-name="ChatGPT">
-<img src="crystal_heart.gif" alt="ChatGPT">
-<a href="https://chat.openai.com" target="_blank">#4 ChatGPT</a>
-</div>
-<div class="site-item" data-name="Copilot">
-<img src="crystal_heart.gif" alt="Copilot">
-<a href="https://github.com/features/copilot" target="_blank">#5 Copilot</a>
-</div>
-</div>
-</body>
-</html>
-</body>
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About me</title>
+		<style>
+			/* Page colors and background */
+			body {
+				margin: 0;
+				min-height: 100vh;
+				font-family: Georgia, serif;
+				color: #f3f3f4;
+				background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDBvNWNsbnRwNDkxYmY0NjlyaDkwcHl2Y3NrenRoZTdrMW9qdWd6YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TxVVB6PfWMjE4/giphy.gif') center/cover no-repeat fixed, #000;
+				cursor: url('cursor.png') 12 12, auto;
+			}
+
+			.container {
+				max-width: 800px;
+				margin: 30px auto;
+				position: relative;
+				z-index: 3;
+			}
+
+			header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 12px;
+			}
+
+			header img {
+				width: 220px;
+				border-radius: 4px;
+				box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+			}
+
+			h1 {
+				font-size: 48px;
+				margin: 0;
+				text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+			}
+
+			h2 { text-align: center; }
+
+			a { color: #cfe8ff; }
+			a:hover { color: #fff; text-decoration: underline; }
+
+			/* Fixed-position site items */
+			.site-item {
+				position: fixed;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				width: 220px;
+				padding: 8px 10px;
+				background: rgba(0,0,0,0.35);
+				border-radius: 12px;
+				box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+				z-index: 2;
+			}
+
+			.site-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+
+			.site-item[data-name="YouTube"] { left: 18%; top: 12%; transform: rotate(-6deg); }
+			.site-item[data-name="Roblox"]  { right: 18%; top: 12%; transform: rotate(6deg); }
+			.site-item[data-name="Google"]  { left: 18%; bottom: 12%; transform: rotate(-4deg); }
+			.site-item[data-name="ChatGPT"] { left: 50%; bottom: 12%; transform: translateX(-50%); }
+			.site-item[data-name="Copilot"] { right: 18%; bottom: 12%; transform: rotate(4deg); }
+
+			@media (max-width: 520px) {
+				.site-item { width: 160px; padding: 6px; }
+				.site-item img { width: 52px; height: 52px; }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Background music (muted to allow autoplay in some browsers) -->
+		<audio controls autoplay loop muted style="display:block; margin:8px 12px 0 12px;">
+			<source src="bg-music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+
+		<div class="container">
+			<header>
+				<img src="profile.jpg" alt="My photo">
+				<h1>Lord Christian Dave D. Cortez</h1>
+				<p>My most visited website recently is <strong><a href="https://www.youtube.com" target="_blank">YouTube</a></strong>.</p>
+			</header>
+
+			<h2>Here are 5 websites I visit most often</h2>
+
+			<div class="site-item" data-name="YouTube">
+				<img src="crystal_heart.gif" alt="YouTube">
+				<a href="https://www.youtube.com" target="_blank">#1 YouTube</a>
+			</div>
+
+			<div class="site-item" data-name="Roblox">
+				<img src="crystal_heart.gif" alt="Roblox">
+				<a href="https://www.roblox.com" target="_blank">#2 Roblox</a>
+			</div>
+
+			<div class="site-item" data-name="Google">
+				<img src="crystal_heart.gif" alt="Google">
+				<a href="https://www.google.com" target="_blank">#3 Google</a>
+			</div>
+
+			<div class="site-item" data-name="ChatGPT">
+				<img src="crystal_heart.gif" alt="ChatGPT">
+				<a href="https://chat.openai.com" target="_blank">#4 ChatGPT</a>
+			</div>
+
+			<div class="site-item" data-name="Copilot">
+				<img src="crystal_heart.gif" alt="Copilot">
+				<a href="https://github.com/features/copilot" target="_blank">#5 Copilot</a>
+			</div>
+
+		</div>
+	</body>
 </html>
